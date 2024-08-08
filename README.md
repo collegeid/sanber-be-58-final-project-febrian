@@ -11,7 +11,44 @@ All API endpoints are relative to the following base URL:
 ```
 https://finalproject-production-b09d.up.railway.app/api/
 ```
+## Automation Tutorial
 
+### Automation Scripts
+
+This project includes the following automation scripts:
+
+1. **`init.sh`**: This script is used to start and initialize all test files.
+
+2. **`qa_order.sh`**: A script for managing orders. This script allows user registration, login, order creation, and order management (create, read, update, delete). Order creation options can include single or bulk orders.
+
+3. **`qa_products_categories.sh`**: A script for managing products and categories. This script creates categories and products with random data, as well as updating and deleting them.
+
+4. **`qa_user.sh`**: A script for registering new users and performing login. Users can use random data or manually entered data.
+
+5. **`tesh.sh`**: Additional testing script (if needed).
+
+### Steps to Use the Automation Scripts
+
+1. **Setting Up the Scripts**:
+   - Ensure you have installed necessary dependencies like `curl` and `jq`.
+   - Modify the `BASE_URL` variable in the scripts to match the API URL being used.
+
+2. **Running the Scripts**:
+   - Grant execution permissions to the script with the command:
+     ```bash
+     chmod +x script.sh
+     ```
+   - Run the script with the desired options. For example, to manage orders:
+     ```bash
+     ./qa_order.sh
+     ```
+
+3. **Selecting Options**:
+   - Follow the prompts in the script to choose the appropriate options (e.g., create an order, get a list of products, etc.).
+
+4. **Checking Results**:
+   - Review the script's output to ensure operations are performed correctly.
+     
 ## Endpoints
 
 ### Products
@@ -692,5 +729,3 @@ curl -X PUT http://your-domain/api/auth/profile \
 ---
 
 This documentation provides a detailed overview of each endpoint, including request formats, expected responses
-
-, and example requests for your Express API.
