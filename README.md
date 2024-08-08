@@ -364,10 +364,23 @@ curl -X DELETE http://your-domain/api/categories/1 \
   - **Content:**
     ```json
     {
-      "id": "1",
-      "product_id": "1",
-      "quantity": 1,
-      "status": "pending"
+      "data": {
+        "createdByEmail": "user_46a2c9e7b8070f15@example.com",
+        "orderItems": {
+          "productId": "66a23f57764df537e268865b",
+          "name": "Kemeja dengan Kategori",
+          "price": 15000,
+          "quantity": 4,
+          "_id": "66b537ff948e62c95791f166"
+        },
+        "grandTotal": 60000,
+        "status": "pending",
+        "_id": "66b537ff948e62c95791f165",
+        "createdAt": "2024-08-08T21:26:23.578Z",
+        "updatedAt": "2024-08-08T21:26:23.578Z",
+        "__v": 0
+      },
+      "message": "Order created successfully"
     }
     ```
 - **Error Response:**
