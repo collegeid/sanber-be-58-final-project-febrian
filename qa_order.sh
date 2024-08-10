@@ -142,7 +142,7 @@ function create_bulk_orders() {
   get_products
 
   # Loop untuk membuat beberapa pesanan
-  for i in {1..10}; do
+  for i in {1..3}; do
     # Pilih produk secara acak
     PRODUCT_NUMBER=$(shuf -i 1-$(echo "$PRODUCTS_RESPONSE" | jq '.data | length') -n 1)
     PRODUCT_ID=$(echo "$PRODUCTS_RESPONSE" | jq -r ".data[$((PRODUCT_NUMBER - 1))]._id")
